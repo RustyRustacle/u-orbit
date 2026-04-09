@@ -46,7 +46,7 @@ export default function FinalCTASection() {
           <motion.h2
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter"
+            className="font-sans not-italic normal-case text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter"
           >
             Launch Your Journey Into <br />
             the <span className="text-gradient">Web3 Universe</span>

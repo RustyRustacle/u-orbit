@@ -44,7 +44,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mb-4"
         >
-          <span className="text-orbit-cyan font-bold uppercase tracking-[0.3em] text-sm md:text-base">
+          <span className="font-anton italic text-orbit-cyan font-bold uppercase tracking-[0.3em] text-sm md:text-base">
             UNTAR Organization for Blockchain Innovation & Technology
           </span>
         </motion.div>
@@ -53,7 +53,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter"
+          className="font-sans not-italic normal-case text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter"
         >
           Explore the <span className="text-gradient">Web3 Universe</span>. <br />
           Become Global Talent.
