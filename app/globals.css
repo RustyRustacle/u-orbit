@@ -12,6 +12,8 @@
   --color-text-secondary: #94A3B8;
 
   --font-anton: var(--font-anton);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 
   --animate-orbit: orbit 20s linear infinite;
   --animate-orbit-reverse: orbit-reverse 25s linear infinite;
@@ -92,6 +94,45 @@
   .btn-outline {
     @apply px-8 py-4 border border-white/20 rounded-full font-bold transition-all duration-300 hover:bg-white/10 active:scale-95;
   }
+
+  /* Academic serif heading override for learn pages */
+  .font-serif {
+    font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  }
+}
+
+/* Code editor syntax highlighting */
+.code-keyword {
+  color: #ff79c6;
+}
+.code-string {
+  color: #f1fa8c;
+}
+.code-number {
+  color: #bd93f9;
+}
+.code-comment {
+  color: #6272a4;
+  font-style: italic;
+}
+
+/* Lesson content styles */
+.lesson-content pre {
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b transparent;
+}
+
+.lesson-content pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lesson-content pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lesson-content pre::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
 }
 
 /* Custom Scrollbar */

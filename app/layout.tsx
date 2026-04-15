@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Anton } from "next/font/google";
+import { Inter, Anton, Source_Serif_4, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
+import Web3Provider from "@/components/Web3Provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,6 +15,18 @@ const anton = Anton({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-anton",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400", "600", "700", "900"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -28,14 +41,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${anton.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${anton.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} scroll-smooth`}>
       <body className="font-sans bg-orbit-deep text-text-primary min-h-screen flex flex-col antialiased">
-        <StarField />
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <Web3Provider>
+          <StarField />
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </Web3Provider>
       </body>
     </html>
   );
